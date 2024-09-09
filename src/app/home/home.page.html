@@ -1,22 +1,46 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-title>Gasolina ou Alcool?</ion-title>
   </ion-toolbar>
-</ion-header>
+ </ion-header>
+ <ion-content>
+  
+    <ion-row class="linha">
+      <ion-col size-sm="12" size-md="6">
+      <ion-card>
+      <ion-card-content>
+      <ion-list>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-item>
+      <ion-label position="floating">Valor da Gasolina</ion-label>
+      <ion-input type="number" [(ngModel)]="gasolina"></ion-input>
+      </ion-item>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
-</ion-content>
+      <ion-item>
+      <ion-label position="floating">Valor do Alcool</ion-label>
+      <ion-input type="number" [(ngModel)]="alcool"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="Comparar()">Comparar</ion-button>
+
+      <ion-item>
+      <ion-label position="floating">Resultado</ion-label>
+      <ion-input [value]="resultado" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Calculo</ion-label>
+        <ion-input [value]="calculo" readonly></ion-input>
+      </ion-item>
+
+      </ion-list>
+      </ion-card-content>
+      </ion-card>
+      </ion-col>
+      </ion-row>
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar>
+      <ion-title class="ion-text-center">Nicolas e Emelly</ion-title>
+      </ion-toolbar>
+  </ion-footer>
